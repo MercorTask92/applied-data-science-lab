@@ -339,10 +339,10 @@ def make_figure(results: pd.DataFrame, analysis_id: str, run_id: str,
         for kind, clr in PALETTE.items()
     ]
     fig.legend(handles=legend, loc="lower center", ncol=2, frameon=False, fontsize=9,
-               bbox_to_anchor=(0.75, -0.02))
+               bbox_to_anchor=(0.5, -0.02))
     fig.suptitle("Vegetation change assessment  |  synthetic training data", x=0.52,
                  y=1.02, fontsize=16, weight="bold", color="#173C3A")
-    fig.tight_layout(rect=(0, 0.12, 1, 0.97), w_pad=3)
+    fig.tight_layout(rect=(0, 0.2, 1, 0.97), w_pad=3)
     fig.text(0.5, 0.02,
              f"FINAL RECORDED RUN {run_id}  |  cutoff {threshold:.2f}  |  cloud limit {cloud_limit}%  |  analysis {analysis_id}",
              ha="center", fontsize=9, color="#283645", weight="bold")
